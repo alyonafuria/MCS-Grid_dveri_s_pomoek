@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
