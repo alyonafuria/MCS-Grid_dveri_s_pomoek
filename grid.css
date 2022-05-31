@@ -1,18 +1,18 @@
-.header__menu-list {
+.nav__list {
     display: grid;
     place-self: center center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "header-menu1 header-menu2 header-menu3";
 }
 
-header__menu-list:nth-child(1) {
+.nav__list:nth-child(1) {
     grid-area: header-menu1;
 }
 
-header__menu-list:nth-child(2) {
+.nav__list:nth-child(2) {
     grid-area: header-menu2;
 }
 
-header__menu-list:nth-child(3) {
+.nav__list:nth-child(3) {
     grid-area: header-menu3;
 }
