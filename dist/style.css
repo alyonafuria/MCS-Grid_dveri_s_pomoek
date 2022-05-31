@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header .header__logo-container {
+.header__logo-container {
   padding-left: 10px;
   height: 100%;
   display: flex;
@@ -33,7 +33,7 @@ body {
   width: 35%;
   height: 100%;
 }
-.header .nav .nav__list {
+.header .nav__list {
   width: 100%;
   height: 100%;
   line-height: 50px;
@@ -41,10 +41,10 @@ body {
   padding: 0;
   margin: 0;
 }
-.header .nav .nav__item {
+.header .nav__item {
   width: 100%;
   text-align: center;
 }
-.header .nav .nav__item:hover {
+.header .nav__item:hover {
   color: blue;
 }
