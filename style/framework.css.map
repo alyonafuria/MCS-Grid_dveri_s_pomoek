@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,QAAQ,CAAR,WAAQ;AACR,QAAQ,CAAR,QAAQ;AACR,QAAQ,CAAR,WAAQ;AACR,QAAQ,CAAR,MAAQ",
+    "sources": [
+        "framework.scss"
+    ],
+    "names": [],
+    "file": "framework.css"
+}

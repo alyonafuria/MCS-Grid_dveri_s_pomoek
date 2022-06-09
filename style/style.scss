@@ -1,5 +1,7 @@
 @use 'framework';
 @use 'variables' as v;
+@use 'sass:list';
+@use 'sass:map';
 
 .wrapper {
     max-width: 1600px;
@@ -43,16 +45,10 @@
             text-align: center;
             color: v.$white-color;
 
-            &:nth-child(1) {
-                background-color: v.$red-color;
-            }
-
-            &:nth-child(2) {
-                background-color: v.$orange-color;
-            }
-
-            &:nth-child(3) {
-                background-color: v.$navy-color;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    background-color: map.get(list.nth(v.$nav-containers, $i), 'background-color');
+                }
             }
 
             &:hover {
@@ -67,16 +63,13 @@
 .hero {
     background-image: url(/assets/img/hero.jpg);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 85vh;
+    @include v.flex(flex, column, space-between);
+    height: 87vh;
     padding: 0 5%;
     margin-bottom: 5%;
 
     &__title {
-        width: 60%;
-        height: 60%;
+        @include v.max-w-h(60%, 60%);
         margin-top: 8%;
         margin-bottom: 2rem;
         font-size: 7rem;
@@ -84,13 +77,11 @@
     }
 
     &__text {
-        width: 30%;
-        height: 15%;
+        @include v.w-h(30%, 15%);
     }
 
     &__button {
-        width: 40%;
-        height: 4rem;
+        @include v.w-h(40%, 4rem);
         position: relative;
         bottom: -2rem;
     }
@@ -103,11 +94,69 @@
 
 
 .info {
-    padding: 0 1rem 3rem;
+    padding: 0rem 1rem 3rem;
+    height: 50vh;
 
     &__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include v.flex(flex, column, start);
+        text-align: center;
+    }
+
+    &__title {
+        padding: 50% 0 0;
+        margin: 0;
+        font-size: 8rem;
+        color: v.$red-color;
+    }
+
+    &__text {
+        font-size: 2rem;
     }
 }
+
+.about {
+    height: 95vh;
+    color: v.$white-color;
+
+    &__container {
+        padding: 1rem;
+        @include v.flex(flex, column, center);
+    }
+
+    @for $i from 1 through 8 {
+        &__container:nth-child(#{$i}) {
+            background-color: map.get(list.nth(v.$about-grid-backgrounds, $i), 'background-color');
+        }
+    }
+
+    &__container:nth-child(2) {
+        background-image: url(/assets/img/door1.jpg);
+        background-size: cover;
+    }
+
+    &__container:nth-child(4) {
+        background-image: url(/assets/img/door2.jpg);
+        background-size: cover;
+        background-position: 50% 75%;
+    }
+
+    &__container:nth-child(8) {
+        background-image: url(/assets/img/door3.jpg);
+        background-size: cover;
+        background-position: left 75%;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    &__button {
+        padding: 0.8rem;
+        background-color: transparent;
+        border: 1px solid v.$white-color;
+        color: v.$white-color;
+    }
+}
+
+

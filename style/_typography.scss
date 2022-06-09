@@ -2,22 +2,23 @@
 
 @font-face {
     font-family: Arimo;
-    src: url('./assets/fonts/Arimo-Bold.woff2') format('woff2'),
+    src: url('/assets/fonts/Arimo-Bold.woff2') format('woff2'),
     font-weight bold;
 }
 
 @font-face {
     font-family: Arimo;
-    src: url('../assets/fonts/Arimo-Regular.woff2') format('woff2'),
+    src: url('/assets/fonts/Arimo-Regular.woff2') format('woff2'),
     font-weight normal;
 }
 
 @font-face {
     font-family: Forum;
-    src: url('../assets/fonts/Forum-Regular.woff2') format('woff2'),
+    src: url('/assets/fonts/Forum-Regular.woff2') format('woff2'),
     font-weight normal;
 }
 
 h1, h2, h3 {
     font-family: v.$font-family-serif;
 }
+
