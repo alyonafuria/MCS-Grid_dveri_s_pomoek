@@ -118,7 +118,7 @@ h1, h2, h3 {
 }
 
 .info {
-  padding: 0 1rem;
+  padding: 0 1rem 3rem;
 }
 .info__card {
   display: flex;
