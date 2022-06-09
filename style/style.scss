@@ -52,8 +52,7 @@
             }
 
             &:hover {
-                color: v.$light-color;
-                cursor: pointer;
+                @include v.hover();
             }
         }
     }
@@ -84,6 +83,10 @@
         @include v.w-h(40%, 4rem);
         position: relative;
         bottom: -2rem;
+
+        &:hover {
+            @include v.hover();
+        }
     }
 
     &__button_black {
@@ -156,7 +159,35 @@
         background-color: transparent;
         border: 1px solid v.$white-color;
         color: v.$white-color;
+
+        &:hover {
+            @include v.hover();
+        }
     }
 }
 
+.news {
+    @include v.w-h(70%, 70vh);
+    width: 70%;
+    margin: auto;
 
+    &__header {
+        font-size: 4rem;
+    }
+
+    &__card {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        border: 1px solid v.$light-color;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid v.$black-color;
+
+        &:hover {
+            @include v.hover();
+            border-color: $light-color;
+        }
+    }
+}

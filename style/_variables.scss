@@ -53,8 +53,19 @@ $about-grid-backgrounds:
     max-height: $max-height;
 }
 
+@mixin min-w-h($min-width, $min-height) {
+    min-width: $min-width;
+    min-height: $min-height;
+}
+
 @mixin flex($flex, $direction, $content) {
     display: $flex;
     flex-direction: $direction;
     justify-content: $content;
+}
+
+@mixin hover() {
+    cursor: pointer;
+    color: $light-color;
+    transition: 0.3s;
 }

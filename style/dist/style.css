@@ -416,6 +416,29 @@ body {
   z-index: 1;
 }
 
+.news {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 2fr 5fr 0.5fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "news-header . ." "news-card-1 news-card-2 news-card-3" "news-button . .";
+}
+.news__header {
+  grid-area: news-header;
+}
+.news__card:nth-child(2) {
+  grid-area: news-card-1;
+}
+.news__card:nth-child(3) {
+  grid-area: news-card-2;
+}
+.news__card:nth-child(4) {
+  grid-area: news-card-3;
+}
+.news__button {
+  grid-area: news-button;
+}
+
 @font-face {
   font-family: Arimo;
   src: url("/assets/fonts/Arimo-Bold.woff2") format("woff2"), font-weight bold;
@@ -481,8 +504,10 @@ h1, h2, h3 {
   background-color: #003049;
 }
 .header .nav__item:hover {
-  color: #EAE2B7;
   cursor: pointer;
+  color: #EAE2B7;
+  border-color: #EAE2B7;
+  transition: 0.3s;
 }
 
 .hero {
@@ -512,6 +537,12 @@ h1, h2, h3 {
   height: 4rem;
   position: relative;
   bottom: -2rem;
+}
+.hero__button:hover {
+  cursor: pointer;
+  color: #EAE2B7;
+  border-color: #EAE2B7;
+  transition: 0.3s;
 }
 .hero__button_black {
   background-color: #03071e;
@@ -595,4 +626,35 @@ h1, h2, h3 {
   background-color: transparent;
   border: 1px solid white;
   color: white;
+}
+.about__button:hover {
+  cursor: pointer;
+  color: #EAE2B7;
+  border-color: #EAE2B7;
+  transition: 0.3s;
+}
+
+.news {
+  width: 70%;
+  height: 70vh;
+  width: 70%;
+  margin: auto;
+}
+.news__header {
+  font-size: 4rem;
+}
+.news__card {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  border: 1px solid #EAE2B7;
+}
+.news__button {
+  background-color: transparent;
+  border: 1px solid #03071e;
+}
+.news__button:hover {
+  cursor: pointer;
+  color: #EAE2B7;
+  border-color: #EAE2B7;
+  transition: 0.3s;
 }

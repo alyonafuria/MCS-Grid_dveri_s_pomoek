@@ -53,3 +53,26 @@
 .about__container:nth-child(6) {
   z-index: 1;
 }
+
+.news {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 2fr 5fr 0.5fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "news-header . ." "news-card-1 news-card-2 news-card-3" "news-button . .";
+}
+.news__header {
+  grid-area: news-header;
+}
+.news__card:nth-child(2) {
+  grid-area: news-card-1;
+}
+.news__card:nth-child(3) {
+  grid-area: news-card-2;
+}
+.news__card:nth-child(4) {
+  grid-area: news-card-3;
+}
+.news__button {
+  grid-area: news-button;
+}
