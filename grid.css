@@ -16,3 +16,10 @@
 .nav__list:nth-child(3) {
     grid-area: header-menu3;
 }
+
+.info {
+    display: grid;
+    place-self: center center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+}
