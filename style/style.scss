@@ -1,41 +1,5 @@
-@font-face {
-    font-family: Arimo;
-    src: url('./assets/fonts/Arimo-Bold.woff2') format('woff2'),
-    font-weight bold;
-}
-
-@font-face {
-    font-family: Arimo;
-    src: url('../assets/fonts/Arimo-Regular.woff2') format('woff2'),
-    font-weight normal;
-}
-
-@font-face {
-    font-family: Forum;
-    src: url('../assets/fonts/Forum-Regular.woff2') format('woff2'),
-    font-weight normal;
-}
-
-* {
-    border: 1px solid black;
-    text-decoration: none;
-}
-
-html {
-    box-sizing: border-box;    
-}
-
-body {
-    font-family: Arimo, Arial, sans-serif;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-h1, h2, h3 {
-    font-family: Forum, 'Times New Roman', serif;
-}
+@use 'framework';
+@use 'variables' as v;
 
 .wrapper {
     max-width: 1600px;
@@ -56,7 +20,7 @@ h1, h2, h3 {
     }
 
     &__logo-link {
-        color: black;
+        color: v.$black-color;
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -77,22 +41,22 @@ h1, h2, h3 {
             width: 100%;
             padding-top: calc(5vh - 0.5rem);
             text-align: center;
-            color: white;
+            color: v.$white-color;
 
             &:nth-child(1) {
-                background-color: #D62828;
+                background-color: v.$red-color;
             }
 
             &:nth-child(2) {
-                background-color: #F77F00;
+                background-color: v.$orange-color;
             }
 
             &:nth-child(3) {
-                background-color: #003049;
+                background-color: v.$navy-color;
             }
 
             &:hover {
-                color: #EAE2B7;
+                color: v.$light-color;
                 cursor: pointer;
             }
         }
@@ -132,8 +96,8 @@ h1, h2, h3 {
     }
 
     &__button_black {
-        background-color: black;
-        color: white;
+        background-color: v.$black-color;
+        color: v.$white-color;
     }
 }
 

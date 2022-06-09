@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+* {
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;    
+
+    /* Portrait phones and smaller */
+    @media (max-width: 480px) {
+        & {
+            font-size: v.$mobile-font-size;
+        }
+    }
+}
+
+body {
+    font-family: v.$font-family-sans-serif;
+    font-size: v.$base-font-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

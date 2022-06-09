@@ -1,0 +1,22 @@
+* {
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  /* Portrait phones and smaller */
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+body {
+  font-family: Arimo, Arial, sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
