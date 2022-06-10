@@ -538,7 +538,7 @@ h1, h2, h3 {
 }
 
 .hero {
-  background-image: url(/assets/img/hero.jpg);
+  background-image: url(assets/img/hero.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -631,16 +631,16 @@ h1, h2, h3 {
   background-color: #03071e;
 }
 .about__container:nth-child(2) {
-  background-image: url(/assets/img/door1.jpg);
+  background-image: url(assets/img/door1.jpg);
   background-size: cover;
 }
 .about__container:nth-child(4) {
-  background-image: url(/assets/img/door2.jpg);
+  background-image: url(assets/img/door2.jpg);
   background-size: cover;
   background-position: 50% 75%;
 }
 .about__container:nth-child(8) {
-  background-image: url(/assets/img/door3.jpg);
+  background-image: url(assets/img/door3.jpg);
   background-size: cover;
   background-position: left 75%;
 }
@@ -703,25 +703,25 @@ h1, h2, h3 {
   transition: 0.3s;
 }
 .social__card:nth-child(4) .social__logo {
-  background-image: url(/assets/svg/telegram.svg);
+  background-image: url(assets/svg/telegram.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
 }
 .social__card:nth-child(5) .social__logo {
-  background-image: url(/assets/svg/twitter.svg);
+  background-image: url(assets/svg/twitter.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
 }
 .social__card:nth-child(6) .social__logo {
-  background-image: url(/assets/svg/instagram.svg);
+  background-image: url(assets/svg/instagram.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
 }
 .social__card:nth-child(7) .social__logo {
-  background-image: url(/assets/svg/youtube.svg);
+  background-image: url(assets/svg/youtube.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;

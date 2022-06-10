@@ -60,7 +60,7 @@
 
 
 .hero {
-    background-image: url(/assets/img/hero.jpg);
+    background-image: url(assets/img/hero.jpg);
     background-size: cover;
     @include v.flex(flex, column, space-between);
     height: 87vh;
@@ -134,18 +134,18 @@
     }
 
     &__container:nth-child(2) {
-        background-image: url(/assets/img/door1.jpg);
+        background-image: url(assets/img/door1.jpg);
         background-size: cover;
     }
 
     &__container:nth-child(4) {
-        background-image: url(/assets/img/door2.jpg);
+        background-image: url(assets/img/door2.jpg);
         background-size: cover;
         background-position: 50% 75%;
     }
 
     &__container:nth-child(8) {
-        background-image: url(/assets/img/door3.jpg);
+        background-image: url(assets/img/door3.jpg);
         background-size: cover;
         background-position: left 75%;
     }
@@ -213,7 +213,7 @@
         @for $i from 1 through 4 {
             &:nth-child(#{$i + 3}) {
                 .social__logo {
-                    background-image: url(/assets/svg/#{map.get(list.nth(v.$social-media-logos, $i), 'background-image')});
+                    background-image: url(assets/svg/#{map.get(list.nth(v.$social-media-logos, $i), 'background-image')});
                     background-repeat: no-repeat;
                     background-size: contain;
                     background-position: bottom;
