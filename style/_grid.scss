@@ -51,7 +51,7 @@
 .news {
     display: grid;
     grid-gap: 1rem;
-    grid-template-rows: 2fr 5fr 0.5fr;
+    grid-template-rows: 2fr 5fr 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "news-header . ."
@@ -76,5 +76,28 @@
 
     &__button {
         grid-area: news-button;
+    }
+}
+
+
+.social {
+    display: grid;
+    grid-gap: 0 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "social-1 social-1 social-1 social-1 social-2 social-2 social-2 social-2 social-3 social-3 social-3 social-3"
+    "social-4 social-4 social-4 social-5 social-5 social-5 social-6 social-6 social-6 social-7 social-7 social-7";
+
+    @for $i from 1 through 3 {
+        &__contacts:nth-child(#{$i}) {
+            grid-area: map.get(list.nth(v.$social-grid-areas, $i), 'grid-area');
+        }
+    }
+
+    @for $i from 4 through 7 {
+        &__card:nth-child(#{$i}) {
+            grid-area: map.get(list.nth(v.$social-grid-areas, $i), 'grid-area');
+        }
     }
 }

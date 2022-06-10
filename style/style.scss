@@ -122,8 +122,9 @@
     color: v.$white-color;
 
     &__container {
-        padding: 1rem;
+        padding: 2rem;
         @include v.flex(flex, column, center);
+        align-items: flex-start;
     }
 
     @for $i from 1 through 8 {
@@ -168,14 +169,15 @@
 
 .news {
     @include v.w-h(70%, 70vh);
-    width: 70%;
     margin: auto;
+    padding-bottom: 3rem;
 
     &__header {
         font-size: 4rem;
     }
 
     &__card {
+        height: 100%;
         margin-bottom: 2rem;
         padding: 0 1rem;
         border: 1px solid v.$light-color;
@@ -187,7 +189,56 @@
 
         &:hover {
             @include v.hover();
-            border-color: $light-color;
+            border-color: v.$light-color;
         }
+    }
+}
+
+.social {
+
+    &__contacts {
+        text-align: center;
+    }
+
+    &__card {
+        min-height: 100px;
+        @include v.flex(flex, column, space-between);
+        text-align: center;
+        border: 1px solid v.$black-color;
+
+        &:hover {
+            @include v.hover();
+        }
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i + 3}) {
+                .social__logo {
+                    background-image: url(/assets/svg/#{map.get(list.nth(v.$social-media-logos, $i), 'background-image')});
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: bottom;
+                }    
+            }
+        }
+    }
+
+    &__type {
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        height: 100%;
+        fill: black;
+        margin-top: 1rem;
+    }    
+}
+
+.footer {
+    width: 70%;
+    margin: auto;
+
+    &__container {
+        margin-top: 2rem;
+        @include v.flex(flex, row, space-between);
     }
 }

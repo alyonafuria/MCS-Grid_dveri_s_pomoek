@@ -338,7 +338,6 @@ template {
 }
 
 * {
-  border: 1px solid black;
   text-decoration: none;
 }
 
@@ -419,7 +418,7 @@ body {
 .news {
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: 2fr 5fr 0.5fr;
+  grid-template-rows: 2fr 5fr 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "news-header . ." "news-card-1 news-card-2 news-card-3" "news-button . .";
 }
@@ -437,6 +436,35 @@ body {
 }
 .news__button {
   grid-area: news-button;
+}
+
+.social {
+  display: grid;
+  grid-gap: 0 2rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "social-1 social-1 social-1 social-1 social-2 social-2 social-2 social-2 social-3 social-3 social-3 social-3" "social-4 social-4 social-4 social-5 social-5 social-5 social-6 social-6 social-6 social-7 social-7 social-7";
+}
+.social__contacts:nth-child(1) {
+  grid-area: social-1;
+}
+.social__contacts:nth-child(2) {
+  grid-area: social-2;
+}
+.social__contacts:nth-child(3) {
+  grid-area: social-3;
+}
+.social__card:nth-child(4) {
+  grid-area: social-4;
+}
+.social__card:nth-child(5) {
+  grid-area: social-5;
+}
+.social__card:nth-child(6) {
+  grid-area: social-6;
+}
+.social__card:nth-child(7) {
+  grid-area: social-7;
 }
 
 @font-face {
@@ -506,7 +534,6 @@ h1, h2, h3 {
 .header .nav__item:hover {
   cursor: pointer;
   color: #EAE2B7;
-  border-color: #EAE2B7;
   transition: 0.3s;
 }
 
@@ -541,7 +568,6 @@ h1, h2, h3 {
 .hero__button:hover {
   cursor: pointer;
   color: #EAE2B7;
-  border-color: #EAE2B7;
   transition: 0.3s;
 }
 .hero__button_black {
@@ -574,10 +600,11 @@ h1, h2, h3 {
   color: white;
 }
 .about__container {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 .about__container:nth-child(1) {
   background-color: #03071e;
@@ -630,20 +657,20 @@ h1, h2, h3 {
 .about__button:hover {
   cursor: pointer;
   color: #EAE2B7;
-  border-color: #EAE2B7;
   transition: 0.3s;
 }
 
 .news {
   width: 70%;
   height: 70vh;
-  width: 70%;
   margin: auto;
+  padding-bottom: 3rem;
 }
 .news__header {
   font-size: 4rem;
 }
 .news__card {
+  height: 100%;
   margin-bottom: 2rem;
   padding: 0 1rem;
   border: 1px solid #EAE2B7;
@@ -655,6 +682,66 @@ h1, h2, h3 {
 .news__button:hover {
   cursor: pointer;
   color: #EAE2B7;
-  border-color: #EAE2B7;
   transition: 0.3s;
+  border-color: #EAE2B7;
+}
+
+.social__contacts {
+  text-align: center;
+}
+.social__card {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid #03071e;
+}
+.social__card:hover {
+  cursor: pointer;
+  color: #EAE2B7;
+  transition: 0.3s;
+}
+.social__card:nth-child(4) .social__logo {
+  background-image: url(/assets/svg/telegram.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.social__card:nth-child(5) .social__logo {
+  background-image: url(/assets/svg/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.social__card:nth-child(6) .social__logo {
+  background-image: url(/assets/svg/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.social__card:nth-child(7) .social__logo {
+  background-image: url(/assets/svg/youtube.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.social__type {
+  text-transform: uppercase;
+}
+.social__logo {
+  height: 100%;
+  fill: black;
+  margin-top: 1rem;
+}
+
+.footer {
+  width: 70%;
+  margin: auto;
+}
+.footer__container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
