@@ -60,7 +60,7 @@
 
 
 .hero {
-    background-image: url(./assets/img/hero.jpg);
+    background-image: url(../assets/img/hero.jpg);
     background-size: cover;
     @include v.flex(flex, column, space-between);
     height: 87vh;

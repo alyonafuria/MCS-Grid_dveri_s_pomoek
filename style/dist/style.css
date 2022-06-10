@@ -538,7 +538,7 @@ h1, h2, h3 {
 }
 
 .hero {
-  background-image: url(./assets/img/hero.jpg);
+  background-image: url(../assets/img/hero.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
